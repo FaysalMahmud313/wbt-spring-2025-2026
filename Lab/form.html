@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <h1>Contact Me</h1>
+
+    <!-- Registration Form with Table -->
+    <form method="post">
+
+        <fieldset>
+            <legend>Contact Me Form</legend>
+
+            <table>
+
+                <tr>
+                    <td><label for="firstName">FirstName:</label></td>
+                    <td><input type="text" id="firstname" name="firstname" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="lastName">LastName:</label></td>
+                    <td><input type="text" id="lastname" name="lastname" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+
+
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Reason of Contact:</label></td>
+                    <td>
+                        <input type="checkbox" value="project"> Project
+                        <input type="checkbox" value="thesis"> Thesis
+                        <input type="checkbox" value="job"> Job
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="topic">Topic:</label></td>
+                    <td>
+                        <select id="topic" name="topic">
+                            <option>Web Development</option>
+                            <option>Mobile App Development</option>
+                            <option>AI/ML Development</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="company">Company:</label></td>
+                    <td><input type="company" id="company" name="company"></td>
+                </tr>
+
+                <tr>
+                    <td> <label for="consultationDate">Consultation Date:</label></td>
+                    <td>
+                        <input type="date" id="consultationDate" name="consultationDate" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit">
+                        <input type="reset">
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+    </form>
+
+
+
+    <a href="index.html">Back to Home</a>
+</body>
+
+</html>
