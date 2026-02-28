@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Donor Form
+    </title>
+
+    <link rel="stylesheet" href="D:\Webtech\wbt-spring-2025-2026\Lab\css\form.css">
+</head>
+
+<body>
+
+    <p><span>*</span> -Donetes Required Information</p>
+    <p><strong>> 1 Donation</strong> > 2 Confirmation > 3 Thank you</p>
+
+
+    <fieldset>
+        <legend>Donor Information</legend>
+
+        <table>
+
+            <tr>
+                <td>First Name <span>*</span></td>
+                <td><input type="text" name="firstName" required></td>
+            </tr>
+
+            <tr>
+                <td>Last Name <span>*</span></td>
+                <td><input type="text" name="lastName" required></td>
+            </tr>
+
+            <tr>
+                <td>Company</td>
+                <td><input type="text" name="company"></td>
+            </tr>
+
+            <tr>
+                <td>Address 1 <span>*</span></td>
+                <td><input type="text" name="address1" required></td>
+            </tr>
+
+            <tr>
+                <td>Address 2</td>
+                <td><input type="text" name="address2"></td>
+            </tr>
+
+            <tr>
+                <td>City <span>*</span></td>
+                <td><input type="text" name="city" required></td>
+            </tr>
+
+            <tr>
+                <td>State <span>*</span></td>
+                <td>
+                    <select name="state" required>
+                        <option>Select a State</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zip Code <span>*</span></td>
+                <td><input type="text" name="zip" required></td>
+            </tr>
+
+            <tr>
+                <td>Country <span>*</span></td>
+                <td>
+                    <select name="country" required>
+                        <option>Select a Country</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" name="phone"></td>
+            </tr>
+
+            <tr>
+                <td>Fax</td>
+                <td><input type="text" name="fax"></td>
+            </tr>
+
+            <tr>
+                <td>Email <span>*</span></td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Donation Amount <span>*</span></td>
+                <td>
+                    <input type="radio" name="amount" value="none"> None
+                    <input type="radio" name="amount" value="50"> 50
+                    <input type="radio" name="amount" value="75"> 75
+                    <input type="radio" name="amount" value="100"> 100
+                    <input type="radio" name="amount" value="250"> 250
+                    <input type="radio" name="amount" value="other"> Other
+
+                </td>
+
+
+
+            </tr>
+
+            <tr>
+                <td>
+                    Other Amount $ <input type="text" name="otherAmount">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Recurring Donation</td>
+                <td>
+                    <input type="checkbox" name="rucurring">
+                    I am interested in giving on a regular basis.
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    Monthly Credit Card $
+                    <input type="text" name="monthlyAmount">
+                    For
+                    <input type="text" name="months">
+                    Months
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Honorarium and Memorial Donation Information</legend>
+
+        <table>
+
+            <tr>
+                <td>I would like to make this donation</td>
+                <td>
+                    <input type="radio" name="donationType" value="honor"> To Honor
+                    <input type="radio" name="donationType" value="memory"> In Memory of
+                </td>
+            </tr>
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="honorName"></td>
+            </tr>
+
+            <tr>
+                <td>Acknowledge Donation to</td>
+                <td><input type="text" name="acknowledgeTo"></td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td><input type="text" name="Address"></td>
+            </tr>
+
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="City"></td>
+            </tr>
+
+            <tr>
+                <td>State</td>
+                <td>
+                    <select name="state">
+                        <option>Select a State</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Zip</td>
+                <td><input type="text" name="zip"></td>
+            </tr>
+
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Additional Information</legend>
+
+        <table>
+
+            <tr>
+                <td>
+                    Please enter your name, company or organization as you would like it to appear in our publications:
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Name</strong></td>
+                <td><input type="text" name="publishName"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="anonymous">
+                    I would like my gift to remain anonymous.
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="matchingGift">
+                    My employer offers a matching gift program.
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="noThankYou">
+                    Please save the cost of acknowledging this gift
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>Comments</strong></td>
+                <td>
+                    <textarea name="comments" rows="5" cols="40"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><strong>How may we contact you?</strong></td>
+                <td>
+                    <input type="checkbox" name="contactEmail"> E-mail
+                    <input type="checkbox" name="contactMail"> Postal Mail
+                    <input type="checkbox" name="contactPhone"> Telephone
+                    <input type="checkbox" name="contactFax"> Fax
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="checkbox" name="volunteerInfo">
+                    I would like information about volunteering.
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Continue">
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+
+
+</body>
+
+</html>

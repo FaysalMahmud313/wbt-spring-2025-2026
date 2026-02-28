@@ -1,0 +1,67 @@
+/* Selector {
+    Property: value;
+} */
+
+/* 1 - Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2 - Body */
+body {
+    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3 - Navigation Bar */
+nav {
+    background-color: #222;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* 4 - List Items */
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* 5 - Navigation Links */
+li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* 6 - Hover Effect */
+li a:hover {
+    background-color: #04AA6D;
+    border-radius: 5px;
+}
+
+/* 7 - Heading */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* 8 - Table */
+table {
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* 9 - Image */
+img {
+    border-radius: 50%;
+}
+
+/* 10 - Strong text */
+strong {
+    color: #444;
+}
