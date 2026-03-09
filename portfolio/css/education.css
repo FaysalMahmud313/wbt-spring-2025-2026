@@ -53,15 +53,27 @@ h1 {
 /* 8 - Table */
 table {
     margin: 30px auto;
-    text-align: center;
+    text-align: left;
 }
 
-/* 9 - Image */
+/* 9 - Logo Image (Box Model) */
 img {
-    border-radius: 10%;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-right: 15px;
 }
 
 /* 10 - Strong text */
 strong {
     color: #444;
+    font-size: 18px;
+}
+
+/* 11 - Education list */
+table ul {
+    margin-left: 90px;
+    margin-bottom: 15px;
 }
