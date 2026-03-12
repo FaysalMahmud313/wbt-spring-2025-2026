@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position Example</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #ccc 1px, transparent 1px),
+                linear-gradient(to bottom, #ccc 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+
+        .container {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+            margin: 50px;
+        }
+
+        .bottom-right {
+            padding: 0 10px;
+            height: 40px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 40px;
+            background-color: #f0f0f0;
+            white-space: nowrap;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bottom-right">Bottom Right</div>
+    </div>
+</body>
+
+</html>

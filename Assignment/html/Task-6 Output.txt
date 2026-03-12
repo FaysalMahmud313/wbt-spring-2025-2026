@@ -1,0 +1,7 @@
+Current Array: [1,2,3,4,5]
+-> Double Values
+[2,4,6,8,10]
+-> Remove Last
+[2,4,6,8]
+-> Add Number
+[2,4,6,8,9]

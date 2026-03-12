@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        span {
+            color: red;
+        }
+
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="section">
+        <h2>Form Validation</h2>
+
+        <form id="nameForm" novalidate>
+
+            <div class="input-group">
+                <label for="firstName">First Name<span>*</span></label>
+                <input type="text" id="firstName" placeholder="Enter your first name" />
+                <div class="error" id="firstNameError"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">Last Name<span>*</span></label>
+                <input type="text" id="lastName" placeholder="Enter your last name" />
+                <div class="error" id="lastNameError"></div>
+            </div>
+
+            <button type="submit">Submit Form</button>
+            <div id="formSuccess" class="success"></div>
+
+        </form>
+    </div>
+
+    <script>
+
+        /*function validateForm() {
+
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+
+            if (firstName === "" || lastName === "") {
+                alert("Both First Name and Last Name are required.");
+                return false;
+            }
+
+            if (firstName.length < 2) {
+                alert("First Name must contain at least 2 characters.");
+                return false;
+            }
+
+            if (lastName.length < 2) {
+                alert("Last Name must contain at least 2 characters.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }*/
+
+
+
+        const nameForm = document.getElementById('nameForm');
+
+        const firstNameInput = document.getElementById('firstName');
+        const lastNameInput = document.getElementById('lastName');
+
+        const firstNameError = document.getElementById('firstNameError');
+        const lastNameError = document.getElementById('lastNameError');
+
+        const formSuccess = document.getElementById('formSuccess');
+
+
+
+        nameForm.addEventListener('submit', function (event) {
+
+            event.preventDefault();
+
+            formSuccess.textContent = "";
+            firstNameError.textContent = "";
+            lastNameError.textContent = "";
+
+            const firstNameValue = firstNameInput.value.trim();
+            const lastNameValue = lastNameInput.value.trim();
+
+            let isFormValid = true;
+
+
+            if (firstNameValue === "") {
+                alert("First Name is required.");
+                isFormValid = false;
+            }
+            else if (firstNameValue.length < 2) {
+                alert("First Name must contain at least 2 characters.");
+                isFormValid = false;
+            }
+            else if (lastNameValue === "") {
+                alert("Last Name is required.");
+                isFormValid = false;
+            }
+            else if (lastNameValue.length < 2) {
+                alert("Last Name must contain at least 2 characters.");
+                isFormValid = false;
+            }
+
+            if (isFormValid) {
+                formSuccess.textContent = "Form submitted successfully!";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

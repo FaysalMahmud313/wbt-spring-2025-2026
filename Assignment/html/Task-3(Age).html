@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Membership Check</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .red-text {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Community Membership Check</h2>
+        <input type="number" id="ageInput" placeholder="Enter your age">
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        const ageInput = document.getElementById('ageInput');
+        const messageDiv = document.getElementById('message');
+
+        ageInput.addEventListener('input', function () {
+            const age = parseInt(ageInput.value);
+
+            if (isNaN(age)) {
+                messageDiv.textContent = "";
+            }
+            else if (age < 40) {
+                messageDiv.textContent = "To be a part of the community, you need to at least 40";
+                messageDiv.classList.remove('red-text');
+
+            }
+            else if (age >= 40 && age <= 50) {
+                messageDiv.textContent = "You are the youngsters of this community";
+                messageDiv.classList.remove('red-text');
+            }
+            else if (age > 50) {
+                messageDiv.textContent = "Top level members of the group";
+                messageDiv.classList.add('red-text');
+            }
+        });
+    </script>
+</body>
+
+</html>
