@@ -44,14 +44,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($_POST["topic"])) {
         $topicErr = "Topic must be selected!";
+        $topic="";
     } else {
         $topic = cleanInput($_POST["topic"]);
     }
 
-    if (empty($_POST["roc"])) {
-        $rocErr = "Reason must be selected!";
+   if (empty($_POST["roc"])) {
+    $rocErr = "Reason must be selected!";
+    $roc = [];
     } else {
-        $roc = $_POST["roc"];
+    $roc = array_map('cleanInput', $_POST["roc"]);
     }
 
     // Gender
@@ -133,9 +135,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <tr>
                 <td><label>Reason of Contact:</label></td>
                 <td>
-                    <input type="checkbox" name="roc[]" value="project"> Project
-                    <input type="checkbox" name="roc[]" value="thesis"> Thesis
-                    <input type="checkbox" name="roc[]" value="job"> Job
+                    <input type="checkbox" name="roc[]" value="project"<?= (is_array($roc) && in_array("project", $roc)) ? "checked" : "" ?>>Project
+                    <input type="checkbox" name="roc[]" value="thesis"<?= (is_array($roc) && in_array("thesis", $roc)) ? "checked" : "" ?>>Thesis
+                    <input type="checkbox" name="roc[]" value="job"<?= (is_array($roc) && in_array("job", $roc)) ? "checked" : "" ?>>Job
                     <span style="color:red"><?= $rocErr ?></span>
                 </td>
             </tr>
